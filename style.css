@@ -1,0 +1,60 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #8ec5fc 0%, #e0c3fc 100%);
+}
+
+.container {
+  width: min(90vw, 420px);
+  background: rgba(255, 255, 255, 0.9);
+  color: #1b1b1b;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.description {
+  margin-bottom: 20px;
+}
+
+.dice {
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.result,
+.history {
+  font-weight: 600;
+}
+
+.roll-button {
+  background: #4c6fff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.1s ease, opacity 0.2s ease;
+}
+
+.roll-button:hover {
+  opacity: 0.9;
+}
+
+.roll-button:active {
+  transform: scale(0.97);
+}

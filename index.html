@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>サイコロアプリ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>🎲 サイコロアプリ</h1>
+      <p class="description">ボタンを押して1〜6の目を出そう！</p>
+
+      <section class="dice-board" aria-live="polite">
+        <div class="dice" id="dice" role="img" aria-label="サイコロの目は1">⚀</div>
+        <p class="result" id="result">現在の目: 1</p>
+      </section>
+
+      <button id="rollButton" class="roll-button" type="button">サイコロを振る</button>
+      <p class="history" id="history">履歴: 1</p>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
