@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>H.M Works｜アプリポータル</title>
+<style>
+  :root{
+    --bg:#101418; --panel:#1a2129; --panel2:#202a35; --line:rgba(255,255,255,.08);
+    --text:#e8eef2; --muted:#8fa3af; --accent:#e6a93f; --accent2:#6fd6e6;
+    --jp:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:var(--jp);background:var(--bg);color:var(--text);line-height:1.6;min-height:100vh}
+  .wrap{max-width:1100px;margin:0 auto;padding:32px 20px 60px}
+
+  header{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-bottom:10px}
+  header img{width:170px;height:auto;mix-blend-mode:lighten;
+    -webkit-mask-image:radial-gradient(ellipse 68% 62% at 50% 50%, #000 55%, transparent 98%);
+    mask-image:radial-gradient(ellipse 68% 62% at 50% 50%, #000 55%, transparent 98%);}
+  header .ttl h1{font-size:clamp(22px,4vw,32px);font-weight:900}
+  header .ttl h1 span{color:var(--accent)}
+  header .ttl p{color:var(--muted);font-size:13px}
+
+  .searchbar{margin:18px 0 8px}
+  .searchbar input{
+    width:100%;padding:12px 16px;font-size:15px;font-family:var(--jp);
+    background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:12px;outline:none;
+  }
+  .searchbar input:focus{border-color:var(--accent2)}
+
+  .cat{margin-top:30px}
+  .cat h2{font-size:17px;font-weight:900;display:flex;align-items:center;gap:10px}
+  .cat h2 .n{font-size:11px;font-weight:700;color:var(--muted);background:var(--panel2);
+    padding:2px 10px;border-radius:999px;border:1px solid var(--line)}
+  .cat h2::after{content:"";flex:1;height:1px;background:var(--line)}
+  .cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin-top:12px}
+  a.card{
+    display:block;text-decoration:none;color:var(--text);
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:14px 15px 12px;transition:.15s;
+  }
+  a.card:hover{transform:translateY(-2px);border-color:var(--accent)}
+  .card .nm{font-weight:900;font-size:15px;display:flex;align-items:center;gap:8px}
+  .card .nm .ic{font-size:19px}
+  .card .ds{font-size:12px;color:var(--muted);margin-top:4px}
+  .card .repo{font-size:10.5px;color:var(--accent2);margin-top:7px;opacity:.8;letter-spacing:.03em}
+  .hidden{display:none}
+  footer{margin-top:48px;text-align:center;color:var(--muted);font-size:12px;border-top:1px solid var(--line);padding-top:18px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="https://choppermoon1623-tech.github.io/Brass-gadget/assets/hm-works-logo.png" alt="H.M Works" onerror="this.style.display='none'">
+    <div class="ttl">
+      <h1>H.M Works <span>アプリポータル</span></h1>
+      <p>公開中の自作アプリまとめ｜クリックでそのまま開けます</p>
+    </div>
+  </header>
+
+  <div class="searchbar">
+    <input id="q" type="search" placeholder="🔍 アプリ名・キーワードで絞り込み（例：テスト、音楽、熱中症）">
+  </div>
+
+  <section class="cat" data-cat>
+    <h2>🎺 吹奏楽・音楽 <span class="n"></span></h2>
+    <div class="cards">
+      <a class="card" href="https://choppermoon1623-tech.github.io/Brass-gadget/">
+        <div class="nm"><span class="ic">🎺</span>吹奏楽部サポートアプリ</div>
+        <div class="ds">運指表・チューナー・ハーモニー・リズム練習など14ツールの総合サイト</div>
+        <div class="repo">Brass-gadget</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/chord/">
+        <div class="nm"><span class="ic">🎹</span>コード構成音チェッカー</div>
+        <div class="ds">コードネームから構成音を確認できる音楽ツール</div>
+        <div class="repo">chord</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cat" data-cat>
+    <h2>📝 テスト対策（生徒自習用） <span class="n"></span></h2>
+    <div class="cards">
+      <a class="card" href="https://choppermoon1623-tech.github.io/music-1/">
+        <div class="nm"><span class="ic">🎵</span>音楽テスト対策｜1年</div>
+        <div class="ds">クイズ形式の自習教材</div>
+        <div class="repo">music-1</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/music-2/">
+        <div class="nm"><span class="ic">🎵</span>音楽テスト対策｜2年</div>
+        <div class="ds">クイズ形式の自習教材</div>
+        <div class="repo">music-2</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/music-3/">
+        <div class="nm"><span class="ic">🎵</span>音楽テスト対策｜3年</div>
+        <div class="ds">クイズ形式の自習教材</div>
+        <div class="repo">music-3</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/art-1/">
+        <div class="nm"><span class="ic">🎨</span>美術テスト対策｜1年</div>
+        <div class="ds">クイズ形式の自習教材</div>
+        <div class="repo">art-1</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/art-2/">
+        <div class="nm"><span class="ic">🎨</span>美術テスト対策｜2年</div>
+        <div class="ds">クイズ形式の自習教材</div>
+        <div class="repo">art-2</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/art-3/">
+        <div class="nm"><span class="ic">🎨</span>美術テスト対策｜3年</div>
+        <div class="ds">クイズ形式の自習教材</div>
+        <div class="repo">art-3</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/techart-1/">
+        <div class="nm"><span class="ic">🔧</span>技術科テスト対策｜1年</div>
+        <div class="ds">生物育成の技術ほか・クイズ形式</div>
+        <div class="repo">techart-1</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/techart-2/">
+        <div class="nm"><span class="ic">🔧</span>技術科テスト対策｜2年</div>
+        <div class="ds">生物育成の技術ほか・クイズ形式</div>
+        <div class="repo">techart-2</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/TECHART2/">
+        <div class="nm"><span class="ic">🔧</span>技術科テスト対策｜2年（別版）</div>
+        <div class="ds">techart-2 と同内容の別バージョン</div>
+        <div class="repo">TECHART2</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/techart-3/">
+        <div class="nm"><span class="ic">🔧</span>技術科テスト対策｜3年</div>
+        <div class="ds">情報の技術ほか・クイズ形式</div>
+        <div class="repo">techart-3</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cat" data-cat>
+    <h2>📚 授業教材 <span class="n"></span></h2>
+    <div class="cards">
+      <a class="card" href="https://choppermoon1623-tech.github.io/electronics/">
+        <div class="nm"><span class="ic">⚡</span>電気のきほん</div>
+        <div class="ds">電気を水の流れにたとえて体感するエネルギー変換教材（技術科）</div>
+        <div class="repo">electronics</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/color/">
+        <div class="nm"><span class="ic">🌈</span>いろいろカラーラボ</div>
+        <div class="ds">色彩を体験して学ぶインタラクティブ教材（美術）</div>
+        <div class="repo">color</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/joho-gijutsu/">
+        <div class="nm"><span class="ic">💻</span>情報・技術科（仮称）の展望</div>
+        <div class="ds">渡邊調査官 講義まとめページ</div>
+        <div class="repo">joho-gijutsu</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cat" data-cat>
+    <h2>🏫 学校ツール <span class="n"></span></h2>
+    <div class="cards">
+      <a class="card" href="https://choppermoon1623-tech.github.io/jikanwari-seisei/">
+        <div class="nm"><span class="ic">📅</span>週時間割 配置アプリ</div>
+        <div class="ds">中学校の週時間割を条件に従って自動配置</div>
+        <div class="repo">jikanwari-seisei</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/sprint-timer/">
+        <div class="nm"><span class="ic">🏃</span>100m走 タイム計測</div>
+        <div class="ds">体育のスプリント計測用ストップウォッチ</div>
+        <div class="repo">sprint-timer</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/weatherreport/">
+        <div class="nm"><span class="ic">🌤️</span>お天気・熱中症ダッシュボード</div>
+        <div class="ds">胆振地方・室蘭の気象庁予報をもとにした天気判断（登別中）</div>
+        <div class="repo">weatherreport</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/WGBTalert/">
+        <div class="nm"><span class="ic">🌡️</span>熱中症指数 2週間予測</div>
+        <div class="ds">WBGTの2週間予測アラート（登別中）</div>
+        <div class="repo">WGBTalert</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/sotugyou-Demo/">
+        <div class="nm"><span class="ic">🎓</span>卒業証書授与式 ダッシュボード</div>
+        <div class="ds">第80回卒業式の進行ダッシュボード</div>
+        <div class="repo">sotugyou-Demo</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cat" data-cat>
+    <h2>🛠️ 制作ツール <span class="n"></span></h2>
+    <div class="cards">
+      <a class="card" href="https://choppermoon1623-tech.github.io/form-maker/">
+        <div class="nm"><span class="ic">🔀</span>FormFlow 分岐フォーム設計</div>
+        <div class="ds">Googleフォームの分岐を視覚設計してGASを生成</div>
+        <div class="repo">form-maker</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/metazun-talk/">
+        <div class="nm"><span class="ic">🗣️</span>めたん×ずんだもん かけあいスタジオ</div>
+        <div class="ds">2キャラの掛け合いで教材ナレーションを生成</div>
+        <div class="repo">metazun-talk</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/zunda-narration/">
+        <div class="nm"><span class="ic">🎤</span>ずんだナレーションメーカー</div>
+        <div class="ds">教材用ナレーション音声の生成ツール</div>
+        <div class="repo">zunda-narration</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/photo-resizer/">
+        <div class="nm"><span class="ic">🖼️</span>Photo Batch Resizer</div>
+        <div class="ds">写真をまとめてリサイズ</div>
+        <div class="repo">photo-resizer</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="cat" data-cat>
+    <h2>🎣 プライベート・その他 <span class="n"></span></h2>
+    <div class="cards">
+      <a class="card" href="https://choppermoon1623-tech.github.io/muroran-marine/">
+        <div class="nm"><span class="ic">🚤</span>室蘭沖 出船判断ナビ</div>
+        <div class="ds">風・波・潮から出船できるかを判断</div>
+        <div class="repo">muroran-marine</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/kochi-final/">
+        <div class="nm"><span class="ic">🐴</span>高知ファイナル 3連単ジェネレーター</div>
+        <div class="ds">高知競馬ファイナルレースの買い目生成</div>
+        <div class="repo">kochi-final</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/ishiwaka/">
+        <div class="nm"><span class="ic">🎷</span>石若先生を囲む会</div>
+        <div class="ds">室蘭工業高校 吹奏楽局 石若世代の会ページ</div>
+        <div class="repo">ishiwaka</div>
+      </a>
+      <a class="card" href="https://choppermoon1623-tech.github.io/fable5-Demo/">
+        <div class="nm"><span class="ic">🤖</span>Claude Fable 5 紹介記事</div>
+        <div class="ds">「AIの回し者 No.43」記事デモページ</div>
+        <div class="repo">fable5-Demo</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>H.M Works ／ このページはブックマーク用ポータルです（アプリ本体は各リポジトリのGitHub Pagesで公開）</footer>
+</div>
+
+<script>
+  // カテゴリごとの件数バッジ
+  document.querySelectorAll("[data-cat]").forEach(sec => {
+    sec.querySelector(".n").textContent = sec.querySelectorAll(".card").length + "本";
+  });
+  // 絞り込み検索
+  const q = document.getElementById("q");
+  q.addEventListener("input", () => {
+    const kw = q.value.trim().toLowerCase();
+    document.querySelectorAll("[data-cat]").forEach(sec => {
+      let visible = 0;
+      sec.querySelectorAll(".card").forEach(card => {
+        const hit = !kw || card.textContent.toLowerCase().includes(kw);
+        card.classList.toggle("hidden", !hit);
+        if (hit) visible++;
+      });
+      sec.classList.toggle("hidden", visible === 0);
+      sec.querySelector(".n").textContent = visible + "本";
+    });
+  });
+</script>
+</body>
+</html>
